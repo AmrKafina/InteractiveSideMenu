@@ -96,7 +96,8 @@ open class MenuContainerViewController: UIViewController {
             action: #selector(MenuInteractiveTransition.handlePanPresentation(recognizer:))
         )
 
-        screenEdgePanRecognizer.edges = .left
+        let isRtl = UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft
+        screenEdgePanRecognizer.edges = isRtl ? .right : .left
         view.addGestureRecognizer(screenEdgePanRecognizer)
     }
 

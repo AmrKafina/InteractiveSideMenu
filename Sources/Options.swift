@@ -80,6 +80,9 @@ public struct TransitionOptions {
     /// The width of visible part of content menu item when the menu is shown. Default value is 56 points.
     public var visibleContentWidth: CGFloat
 
+    /// Specifies the menu transition direction. If true, the menu slides in from the right. Default value is false.
+    public var useRtlTransition = UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft
+  
     /// Defines if spring animation will be used on menu transition finishing. Default value is true.
     public var useFinishingSpringSettings = true
 
